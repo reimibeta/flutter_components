@@ -5,10 +5,10 @@ class ListSeparated<T> extends StatefulWidget {
 
   List<T> results;
   ScrollController controller;
-  Function(String) title;
-  Function(String) subtitle;
+  Function title;
+  Function subtitle;
   Widget trailingIcon;
-  Function(String, int) onTap;
+  Function(dynamic, int) onTap;
 
   ListSeparated({
     Key key,
@@ -29,6 +29,10 @@ class _ListSeparatedState extends State<ListSeparated> {
   @override
   void initState() {
     super.initState();
+  }
+
+  Widget _title(int position){
+    return Text(widget.title(widget.results[position]));
   }
 
   String _subtitle(int position){
