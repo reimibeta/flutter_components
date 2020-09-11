@@ -31,7 +31,7 @@ class _ListSeparatedState extends State<ListSeparated> {
     super.initState();
   }
 
-  Widget _subtitle(int position){
+  String _subtitle(int position){
     return widget.subtitle != null ? widget.subtitle(widget.results[position]) : null;
   }
 
@@ -54,8 +54,8 @@ class _ListSeparatedState extends State<ListSeparated> {
       itemCount: this.widget.results.length,
       itemBuilder: (_,int position){
         return new ListTile(
-            title: widget.title(widget.results[position]),
-            subtitle: _subtitle(position),
+            title: Text(widget.title(widget.results[position])),
+            subtitle: Text(_subtitle(position)),
             trailing: _trailing(),
             // ignore: unnecessary_statements
             onTap:() async {
