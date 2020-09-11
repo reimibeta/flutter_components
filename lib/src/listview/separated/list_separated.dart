@@ -5,10 +5,10 @@ class ListSeparated<T> extends StatefulWidget {
 
   List<T> results;
   ScrollController controller;
-  Function(String) title;
-  Function(String) subtitle;
+  Function(T) title;
+  Function(T) subtitle;
   Widget trailingIcon;
-  Function(String, int) onTap;
+  Function(T, int) onTap;
 
   ListSeparated({
     Key key,
