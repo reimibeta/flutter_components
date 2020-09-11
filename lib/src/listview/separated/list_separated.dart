@@ -5,10 +5,10 @@ class ListSeparated<T> extends StatefulWidget {
 
   List<T> results;
   ScrollController controller;
-  Function title;
-  Function subtitle;
+  Function(T) title;
+  Function(T) subtitle;
   Widget trailingIcon;
-  Function(dynamic, int) onTap;
+  Function(T, int) onTap;
 
   ListSeparated({
     Key key,
@@ -32,10 +32,10 @@ class _ListSeparatedState extends State<ListSeparated> {
   }
 
   Widget _title(int position){
-    return Text(widget.title(widget.results[position]));
+    return widget.title(widget.results[position]);
   }
 
-  String _subtitle(int position){
+  Widget _subtitle(int position){
     return widget.subtitle != null ? widget.subtitle(widget.results[position]) : null;
   }
 
@@ -58,8 +58,8 @@ class _ListSeparatedState extends State<ListSeparated> {
       itemCount: this.widget.results.length,
       itemBuilder: (_,int position){
         return new ListTile(
-            title: Text(widget.title(widget.results[position])),
-            subtitle: Text(_subtitle(position)),
+            title: _title(position),
+            subtitle: _subtitle(position),
             trailing: _trailing(),
             // ignore: unnecessary_statements
             onTap:() async {
