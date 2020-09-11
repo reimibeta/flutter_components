@@ -1,2 +1,2 @@
 
-export 'src/keyboard_focus.dart' show KeyboardFocus;
+export 'focus/keyboard_focus.dart' show KeyboardFocus;
