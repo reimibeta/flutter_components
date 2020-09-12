@@ -1,2 +1,2 @@
 // scroll pagination
-export 'scroll_pagination/scroll_pagination.dart';
+export 'pagination_scroll/pagination_scroll.dart';
