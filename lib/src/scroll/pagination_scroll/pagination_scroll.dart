@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ScrollPagination<T> extends StatefulWidget {
+class PaginationScroll<T> extends StatefulWidget {
 
   final int start;
   final int limit;
@@ -10,7 +10,7 @@ class ScrollPagination<T> extends StatefulWidget {
   final Function(ScrollController) listView;
   final List<T> results;
 
-  ScrollPagination({Key key,
+  PaginationScroll({Key key,
     this.start,
     this.limit,
     @required this.controller,
@@ -20,10 +20,10 @@ class ScrollPagination<T> extends StatefulWidget {
     this.results
   }) : super(key: key);
   @override
-  _ScrollPaginationState createState() => new _ScrollPaginationState();
+  _PaginationScrollState createState() => new _PaginationScrollState();
 }
 
-class _ScrollPaginationState extends State<ScrollPagination> {
+class _PaginationScrollState extends State<PaginationScroll> {
 
   int _start = 0;
   int _limit = 1000;
