@@ -10,3 +10,5 @@ export 'src/listview/listview.dart';
 export 'src/scroll/scroll.dart';
 // navigation
 export 'src/navigation/navigation.dart';
+// progressloader
+export 'src/progressloader/progressloader.dart';
