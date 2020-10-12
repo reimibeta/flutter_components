@@ -16,3 +16,5 @@ export 'src/progressloader/progressloader.dart';
 export 'src/datetimepicker/datetime_picker.dart';
 // text
 export 'src/text/text.dart';
+// gallery
+export 'src/gallery/gallery.dart';
