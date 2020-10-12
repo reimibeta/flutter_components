@@ -1,8 +1,8 @@
 name: flutter_components
 description: A new Flutter package.
 version: 0.0.1
-author:
-homepage:
+author: Reimi
+homepage: http://kh846.com
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
