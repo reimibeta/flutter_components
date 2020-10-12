@@ -12,3 +12,7 @@ export 'src/scroll/scroll.dart';
 export 'src/navigation/navigation.dart';
 // progressloader
 export 'src/progressloader/progressloader.dart';
+// datetime picker
+export 'src/datetimepicker/datetime_picker.dart';
+// text
+export 'src/text/text.dart';
