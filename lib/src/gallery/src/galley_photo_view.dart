@@ -7,12 +7,14 @@ class GalleyPhotoView<T> extends StatelessWidget {
   final Function file;
   final Function onTap;
   final Function getIndex;
+  final BoxFit boxFit;
 
   GalleyPhotoView({Key key,
     @required this.images,
     @required this.file,
     @required this.onTap,
-    this.getIndex
+    this.getIndex,
+    this.boxFit
   }):super(key: key);
 
   @override
@@ -33,7 +35,7 @@ class GalleyPhotoView<T> extends StatelessWidget {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: CachedNetworkImageProvider(this.file(images[index])),
-                  fit: BoxFit.fitHeight,
+                  fit: boxFit ?? BoxFit.fitHeight,
                 ),
               ),
             ),
