@@ -73,6 +73,7 @@ class _GalleryPhotoViewWrapperState extends State<GalleryPhotoViewWrapper> {
               top: 30,
               right: -15,
               child: FlatButton(
+                splashColor: Colors.transparent,
                 child: Icon(
                   Icons.clear,
                   color: Colors.white,
