@@ -71,7 +71,7 @@ class _GalleryPhotoViewWrapperState extends State<GalleryPhotoViewWrapper> {
             ),
             Positioned(
               top: 30,
-              right: -15,
+              right: 10,
               child: IconButton(
                 splashColor: Colors.transparent,
                 icon: Icon(
