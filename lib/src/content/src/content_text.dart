@@ -35,7 +35,7 @@ class ContentText extends StatelessWidget {
         Expanded(
           flex: this.contentFlex ?? 4,
           child: this.contentWidget ?? Text(
-            "\t\t$content",
+            "\t:$content",
             style: this.contentStyle ?? TextStyle(),
           ),
         ),
