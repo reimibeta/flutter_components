@@ -36,11 +36,10 @@ class ContentDate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     initializeDateFormatting();
-    // return Text(_date(this.date, error: this.error ?? "not available"));
     return ContentText(
-      title: "\t\t\t${this.title}",
+      title: "${this.title}",
       titleStyle: TextStyle(fontWeight: FontWeight.bold),
-      content: ":\t${_checkEmptyDate(this.date, error: this.error ?? "not available")}",
+      content: ":${_checkEmptyDate(this.date, error: this.error ?? "not available")}",
     );
   }
 }
