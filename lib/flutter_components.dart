@@ -14,7 +14,7 @@ export 'src/navigation/navigation.dart';
 export 'src/progressloader/progressloader.dart';
 // datetime picker
 export 'src/datetimepicker/datetime_picker.dart';
-// text
-export 'src/text/text.dart';
+// content
+export 'src/content/flutter_content.dart';
 // gallery
 export 'src/gallery/flutter_gallery.dart';
