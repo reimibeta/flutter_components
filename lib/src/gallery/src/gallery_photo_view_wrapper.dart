@@ -4,12 +4,10 @@ import 'package:photo_view/photo_view_gallery.dart';
 
 class GalleryPhotoViewWrapper<T> extends StatefulWidget {
 
-  final Function id;
-  final Function file;
+  final List<T> image;
 
   GalleryPhotoViewWrapper({
-    @required this.id,
-    @required this.file,
+    @required this.image,
     this.loadingBuilder,
     this.backgroundDecoration,
     this.minScale,
@@ -90,13 +88,12 @@ class _GalleryPhotoViewWrapperState extends State<GalleryPhotoViewWrapper> {
   }
 
   PhotoViewGalleryPageOptions _buildItem(BuildContext context, int index) {
-    // final ProductImage item = widget.galleryItems[index];
     return PhotoViewGalleryPageOptions(
-      imageProvider: NetworkImage(this.widget.file(widget.galleryItems[index])), // item.image
+      imageProvider: NetworkImage(this.widget.image[index]), // item.image
       initialScale: PhotoViewComputedScale.contained,
       minScale: PhotoViewComputedScale.contained * (0.5 + index / 10),
       maxScale: PhotoViewComputedScale.covered * 1.1,
-      heroAttributes: PhotoViewHeroAttributes(tag: this.widget.id(widget.galleryItems[index])), //item.id
+      heroAttributes: PhotoViewHeroAttributes(tag: index), //item.id
     );
   }
 }

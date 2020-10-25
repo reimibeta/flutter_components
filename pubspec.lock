@@ -104,6 +104,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.4.2"
+  flutter_push_transition:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: "0083e2d0660a5f942941fe1d4c4557450ef8e0ea"
+      resolved-ref: "0083e2d0660a5f942941fe1d4c4557450ef8e0ea"
+      url: "git://github.com/reimibeta/flutter_push_transition.git"
+    source: git
+    version: "1.0.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter

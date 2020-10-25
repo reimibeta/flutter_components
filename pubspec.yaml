@@ -16,6 +16,11 @@ dependencies:
   cached_network_image: ^2.2.0+1
   # photo view
   photo_view: ^0.9.2
+  # flutter push transition
+  flutter_push_transition:
+    git:
+      url: git://github.com/reimibeta/flutter_push_transition.git
+      ref: 0083e2d0660a5f942941fe1d4c4557450ef8e0ea
 
 dev_dependencies:
   flutter_test:

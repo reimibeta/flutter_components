@@ -17,4 +17,4 @@ export 'src/datetimepicker/datetime_picker.dart';
 // text
 export 'src/text/text.dart';
 // gallery
-export 'src/gallery/gallery.dart';
+export 'src/gallery/flutter_gallery.dart';
