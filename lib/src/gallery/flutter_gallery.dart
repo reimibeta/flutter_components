@@ -7,10 +7,11 @@ import 'src/gallery_photo_view_wrapper.dart';
 
 class FlutterGallery {
 
-  void open<T>(BuildContext context,List<T> images, final int index) {
+  void open<T>(BuildContext context, {@required List<T> images, @required int index, @required Function view}) {
     FlutterPushTransition.push(context, goto: GalleryPhotoViewWrapper(
-      image: images,
-      galleryItems: images,
+      view: view,
+      images: images,
+      // galleryItems: images,
       backgroundDecoration: const BoxDecoration(
         color: Colors.black,
       ),
