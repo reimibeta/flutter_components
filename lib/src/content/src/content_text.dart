@@ -28,14 +28,14 @@ class ContentText extends StatelessWidget {
         Expanded(
           flex: this.titleFlex ?? 1,
           child: this.titleWidget ?? Text(
-            "$title",
+            "\t\t\t$title",
             style: this.titleStyle ?? TextStyle(),
           ),
         ),
         Expanded(
           flex: this.contentFlex ?? 4,
           child: this.contentWidget ?? Text(
-            content,
+            "\t$content",
             style: this.contentStyle ?? TextStyle(),
           ),
         ),
