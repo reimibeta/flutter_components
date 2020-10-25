@@ -4,16 +4,20 @@ import 'package:photo_view/photo_view_gallery.dart';
 
 class GalleryPhotoViewWrapper<T> extends StatefulWidget {
 
-  final List<T> image;
+  final List<T> images;
+  final Function view;
+  // final Function onImages;
 
   GalleryPhotoViewWrapper({
-    @required this.image,
+    @required this.images,
+    @required this.view,
+    // @required this.onImages,
     this.loadingBuilder,
     this.backgroundDecoration,
     this.minScale,
     this.maxScale,
     this.initialIndex,
-    @required this.galleryItems,
+    // @required this.galleryItems,
     this.scrollDirection = Axis.horizontal,
   }) : pageController = PageController(initialPage: initialIndex);
 
@@ -23,7 +27,6 @@ class GalleryPhotoViewWrapper<T> extends StatefulWidget {
   final dynamic maxScale;
   final int initialIndex;
   final PageController pageController;
-  final List<T> galleryItems;
   final Axis scrollDirection;
 
   @override
@@ -38,7 +41,7 @@ class _GalleryPhotoViewWrapperState extends State<GalleryPhotoViewWrapper> {
   @override
   void initState() {
     currentIndex = widget.initialIndex;
-    print("images: ${this.widget.galleryItems.length}");
+    print("images: ${this.widget.images.length}");
     super.initState();
   }
 
@@ -62,7 +65,7 @@ class _GalleryPhotoViewWrapperState extends State<GalleryPhotoViewWrapper> {
             PhotoViewGallery.builder(
               scrollPhysics: const BouncingScrollPhysics(),
               builder: _buildItem,
-              itemCount: widget.galleryItems.length,
+              itemCount: widget.images.length,
               loadingBuilder: widget.loadingBuilder,
               backgroundDecoration: widget.backgroundDecoration,
               pageController: widget.pageController,
@@ -89,7 +92,9 @@ class _GalleryPhotoViewWrapperState extends State<GalleryPhotoViewWrapper> {
 
   PhotoViewGalleryPageOptions _buildItem(BuildContext context, int index) {
     return PhotoViewGalleryPageOptions(
-      imageProvider: NetworkImage(this.widget.image[index]), // item.image
+      imageProvider: NetworkImage(
+        this.widget.view(this.widget.images[index])
+      ), // item.image
       initialScale: PhotoViewComputedScale.contained,
       minScale: PhotoViewComputedScale.contained * (0.5 + index / 10),
       maxScale: PhotoViewComputedScale.covered * 1.1,
