@@ -22,8 +22,8 @@ class ContentStatus extends StatelessWidget {
         titleStyle: TextStyle(fontWeight: FontWeight.bold),
         contentWidget: Row(
           children: [
-            Text("",),
-            Text(":\t${this.success ?? 'success'}", style: TextStyle(color: Colors.green.shade700),)
+            Text(":",),
+            Text("\t${this.success ?? 'success'}", style: TextStyle(color: Colors.green.shade700),)
           ],
         ),
         contentStyle: null,
@@ -34,8 +34,8 @@ class ContentStatus extends StatelessWidget {
         titleStyle: TextStyle(fontWeight: FontWeight.bold),
         contentWidget: Row(
           children: [
-            Text("",),
-            Text(":\t${this.error ?? 'error'}", style: TextStyle(color: Colors.red.shade700),)
+            Text(":",),
+            Text("\t${this.error ?? 'error'}", style: TextStyle(color: Colors.red.shade700),)
           ],
         ),
         contentStyle: null,
