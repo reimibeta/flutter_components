@@ -4,6 +4,7 @@ import 'src/content_image.dart';
 export 'src/content_image.dart';
 export 'src/content_text.dart';
 export 'src/content_date.dart';
+export 'src/content_status.dart';
 
 class FlutterContent<T> extends StatelessWidget {
 
