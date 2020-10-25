@@ -3,7 +3,7 @@ import 'src/content_image.dart';
 
 export 'src/content_image.dart';
 export 'src/content_text.dart';
-
+export 'src/content_date.dart';
 
 class FlutterContent<T> extends StatelessWidget {
 
