@@ -39,7 +39,7 @@ class ContentDate extends StatelessWidget {
     return ContentText(
       title: "${this.title}",
       titleStyle: TextStyle(fontWeight: FontWeight.bold),
-      content: ":${_checkEmptyDate(this.date, error: this.error ?? "not available")}",
+      content: "${_checkEmptyDate(this.date, error: this.error ?? "not available")}",
     );
   }
 }
