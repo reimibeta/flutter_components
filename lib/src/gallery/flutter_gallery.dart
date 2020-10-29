@@ -10,16 +10,18 @@ class FlutterGallery {
   void open<T>(BuildContext context, {
     @required List<T> images,
     @required int index,
-    @required Function(T) view}) {
-    FlutterPushTransition.push(context, goto: GalleryPhotoViewWrapper<T>(
-      view: view,
-      images: images,
-      backgroundDecoration: const BoxDecoration(
-        color: Colors.black,
-      ),
-      initialIndex: index,
-      scrollDirection: Axis.horizontal,
-    ));
+    @required Function view}) {
+    FlutterPushTransition.push(context,
+      goto: GalleryPhotoViewWrapper<T>(
+        view: view,
+        images: images,
+        backgroundDecoration: const BoxDecoration(
+          color: Colors.black,
+        ),
+        initialIndex: index,
+        scrollDirection: Axis.horizontal,
+      )
+    );
   }
 
 }
