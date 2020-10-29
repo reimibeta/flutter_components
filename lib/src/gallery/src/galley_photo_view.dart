@@ -4,7 +4,7 @@ import 'package:flutter/material.dart' hide Image;
 class GalleyPhotoView<T> extends StatelessWidget {
 
   final List<T> images;
-  final String thumbnail;
+  final Function thumbnail;
   final Function onTap;
   final Function getIndex;
   final BoxFit boxFit;
@@ -34,7 +34,9 @@ class GalleyPhotoView<T> extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: CachedNetworkImageProvider(this.thumbnail),
+                  image: CachedNetworkImageProvider(
+                      this.thumbnail(this.images[index])
+                  ),
                   fit: boxFit ?? BoxFit.fitHeight,
                 ),
               ),

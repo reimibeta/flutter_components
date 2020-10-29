@@ -4,7 +4,7 @@ import 'package:flutter_components/flutter_components.dart';
 class ContentImage<T> extends StatelessWidget {
 
   final List<T> models;
-  final String thumbnail;
+  final Function thumbnail;
   final Function view;
   final Text caption;
 
