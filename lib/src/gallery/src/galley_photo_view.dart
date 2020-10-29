@@ -4,7 +4,7 @@ import 'package:flutter/material.dart' hide Image;
 class GalleyPhotoView<T> extends StatelessWidget {
 
   final List<T> images;
-  final Function(T) thumbnail;
+  final Function thumbnail;
   final Function onTap;
   final Function getIndex;
   final BoxFit boxFit;
