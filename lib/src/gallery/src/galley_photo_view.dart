@@ -35,7 +35,7 @@ class GalleyPhotoView<T> extends StatelessWidget {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: CachedNetworkImageProvider(
-                      this.thumbnail(this.images[index])
+                      this.thumbnail(this.images[index]).toString()
                   ),
                   fit: boxFit ?? BoxFit.fitHeight,
                 ),
