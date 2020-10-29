@@ -29,7 +29,7 @@ class ContentImage<T> extends StatelessWidget {
                   context,
                   images: this.models,
                   index: index,
-                  view: (T) => this.view
+                  view: this.view
               );
             },
             getIndex: (index){
