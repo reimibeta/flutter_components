@@ -22,7 +22,7 @@ class ContentImage<T> extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           GalleyPhotoView<T>(
-            thumbnail: (T) => this.thumbnail,
+            thumbnail: this.thumbnail,
             images: this.models,
             onTap: (index){
               flutterGallery.open<T>(
