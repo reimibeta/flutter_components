@@ -5,13 +5,13 @@ class ContentImage<T> extends StatelessWidget {
 
   final List<T> models;
   final Function(T) thumbnail;
-  final Function view;
+  final Function(T) image;
   final Text caption;
 
   ContentImage({Key key,
     @required this.models,
     @required this.thumbnail,
-    @required this.view,
+    @required this.image,
     this.caption
   }):super(key: key);
 
@@ -29,7 +29,7 @@ class ContentImage<T> extends StatelessWidget {
                   context,
                   images: this.models,
                   index: index,
-                  view: this.view
+                  view: this.image
               );
             },
             getIndex: (index){
