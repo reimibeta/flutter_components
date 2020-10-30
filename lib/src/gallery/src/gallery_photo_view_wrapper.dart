@@ -32,7 +32,7 @@ class GalleryPhotoViewWrapper<T> extends StatefulWidget {
   }
 }
 
-class _GalleryPhotoViewWrapperState extends State<GalleryPhotoViewWrapper> {
+class _GalleryPhotoViewWrapperState<T> extends State<GalleryPhotoViewWrapper<T>> {
   int currentIndex;
 
   @override
