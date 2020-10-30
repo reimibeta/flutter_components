@@ -29,7 +29,7 @@ class ContentText extends StatelessWidget {
           flex: this.titleFlex ?? 1,
           child: this.titleWidget ?? Text(
             "\t\t$title",
-            style: this.titleStyle ?? TextStyle(),
+            style: this.titleStyle ?? TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
         Expanded(
