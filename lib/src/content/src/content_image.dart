@@ -5,7 +5,7 @@ class ContentImage<T> extends StatelessWidget {
 
   final List<T> models;
   final Function(T) thumbnail;
-  final Function view;
+  final Function(T) view;
   final Text caption;
 
   ContentImage({Key key,
