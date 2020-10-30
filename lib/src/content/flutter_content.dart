@@ -10,10 +10,12 @@ class FlutterContent<T> extends StatelessWidget {
 
   final ContentImage contentImage;
   final List<Widget> contentTexts;
+  final EdgeInsetsGeometry contentPadding;
 
   FlutterContent({Key key,
     this.contentImage,
-    @required this.contentTexts
+    @required this.contentTexts,
+    this.contentPadding
   }):super(key: key);
 
   @override
@@ -24,6 +26,7 @@ class FlutterContent<T> extends StatelessWidget {
       contents.add(contentText);
     }
     return Container(
+      padding: this.contentPadding,
       child: SingleChildScrollView(
         child: Column(
           children: contents,
