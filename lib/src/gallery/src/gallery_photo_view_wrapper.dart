@@ -28,7 +28,7 @@ class GalleryPhotoViewWrapper<T> extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    return _GalleryPhotoViewWrapperState();
+    return _GalleryPhotoViewWrapperState<T>();
   }
 }
 
