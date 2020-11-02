@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_components/src/safearea/src/ui_overlays.dart';
 
+export 'src/ui_overlays.dart';
+
 class FlutterSafeArea extends StatelessWidget {
 
   final Widget child;

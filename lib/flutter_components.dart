@@ -18,3 +18,5 @@ export 'src/datetimepicker/datetime_picker.dart';
 export 'src/content/flutter_content.dart';
 // gallery
 export 'src/gallery/flutter_gallery.dart';
+// safearea
+export 'src/safearea/flutter_safe_area.dart';
