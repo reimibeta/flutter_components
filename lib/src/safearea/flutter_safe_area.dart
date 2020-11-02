@@ -6,14 +6,14 @@ export 'src/ui_overlays.dart';
 class FlutterSafeArea extends StatelessWidget {
 
   final Widget child;
-  final UiOverlayEnum uiOverlay;
+  final UiOverlayMode uiOverlayMode;
 
-  FlutterSafeArea({Key key, this.child, this.uiOverlay}):super(key: key);
+  FlutterSafeArea({Key key, this.child, this.uiOverlayMode}):super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    if(this.uiOverlay != null){
-      UiOverlays.mode(this.uiOverlay);
+    if(this.uiOverlayMode != null){
+      UiOverlays.mode(this.uiOverlayMode);
     }
     return SafeArea(child: this.child ?? Container());
   }
