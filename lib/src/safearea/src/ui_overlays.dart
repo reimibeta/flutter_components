@@ -1,7 +1,7 @@
 
 import 'package:flutter/services.dart';
 
-enum UiOverlayEnum {
+enum UiOverlayMode {
   HIDE_STATUS_BAR,
   HIDE_BOTTOM_MENU_BAR,
   FULLSCREEN_MODE
@@ -21,15 +21,15 @@ class UiOverlays {
     SystemChrome.setEnabledSystemUIOverlays ([]);
   }
 
-  static void mode(UiOverlayEnum uiOverlayEnum){
-    switch(uiOverlayEnum){
-      case UiOverlayEnum.HIDE_STATUS_BAR:
+  static void mode(UiOverlayMode uiOverlayMode){
+    switch(uiOverlayMode){
+      case UiOverlayMode.HIDE_STATUS_BAR:
         hideStatusBar();
         break;
-      case UiOverlayEnum.HIDE_BOTTOM_MENU_BAR:
+      case UiOverlayMode.HIDE_BOTTOM_MENU_BAR:
         hideBottomMenuBar();
         break;
-      case UiOverlayEnum.FULLSCREEN_MODE:
+      case UiOverlayMode.FULLSCREEN_MODE:
         fullScreenMode();
         break;
     }
