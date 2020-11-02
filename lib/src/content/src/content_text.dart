@@ -26,7 +26,7 @@ class ContentText extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          flex: this.titleFlex ?? 1,
+          flex: this.titleFlex ?? 2,
           child: this.titleWidget ?? Text(
             "\t\t$title",
             style: this.titleStyle ?? TextStyle(fontWeight: FontWeight.bold),
